@@ -2,8 +2,6 @@
 ### Binary search is an efficient algorithm for finding an item from a <strong>sorted list</strong> of items. It works by repeatedly dividing the half portion of the list that can contain the item until you minimize the possible locations to just one.
 
 ---
-<br>
-
 ### Imagine you are searching for a person name in a phone book or looking for a word in a dictionary, You could start at the beginning and keep flipping pages until you get the page that the name/word starts with. But you are more likely to open the middle of the book beacause it might be the nearest way to find what you are looking for. And with binary search is the same aproach
 ---
 <br>
@@ -22,22 +20,20 @@
 ![ranges](https://cdn.kastatic.org/ka-perseus-images/a376ce2d2746fc126293571121a818f395a97354.png)
 <br>
 ## Basic Implementation
-<br>
-   1 - min = 0 and max = len(list) - 1 <br>
-   2 - middle = (min + max) / 2 <br>
-   3 - guess = list[middle] <br>
-   4 - if (guess == target) {
+    1 - min = 0 and max = len(list) - 1 
+    2 - middle = (min + max) / 2 
+    3 - guess = list[middle] 
+    4 - if (guess == target) {
         return guess
-    } <br>
-   5 - if (guess < target) {
+    } 
+    5 - if (guess < target) {
         min = middle + 1
-    } <br>
+    } 
     6 - if (guess > target) {
         max = middle - 1
-    }<br>
+    }
+    
     7 - We have a new middle, a new try and the loop continuos
-
-<br>
 
 <ol>
     <li>We set the minimum that is the position zero and the maximum that is the list size -1 </li>
@@ -47,5 +43,8 @@
     <li>If the guess is lower, that means that the target is to the right side so we move our minimum value setting it to the middle + 1, slicing the list to the reasonble range</li>
     <li>If the guess is high, we do the opposite setting the maximum to the middle - 1 </li>
 </ol>
+
+---
+
 
 
