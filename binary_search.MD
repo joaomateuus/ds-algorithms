@@ -38,15 +38,29 @@
     7 - We have a new middle, a new try and the loop continuos
 
 <ol>
-    <li>We set the minimum that is the position zero and the maximum that is the list size -1 </li>
-    <li>The middle will be the sum of minimum and maximum divided by two, getting the exacly middle of the list</li>
-    <li>The guess is the middle of the list</li>
-    <li>If you guessed the number, stop. You found it!</li>
-    <li>If the guess is lower, that means that the target is to the right side so we move our minimum value setting it to the middle + 1, slicing the list to the reasonble range</li>
-    <li>If the guess is high, we do the opposite setting the maximum to the middle - 1 </li>
+    <li>
+        We set the minimum that is the position zero and the maximum that is the list size -1
+    </li>
+    <li>
+        The middle will be the sum of minimum and maximum divided by two, getting the exacly middle of the list
+    </li>
+    <li>
+        The guess is the middle of the list
+    </li>
+    <li>
+        If you guessed the number, stop. You found it!
+    </li>
+    <li>
+        If the guess is lower, that means that the target is to the right side so we move our minimum value setting it to the middle + 1, slicing the list to the reasonble range
+    </li>
+    <li>
+        If the guess is high, we do the opposite setting the maximum to the middle - 1 
+    </li>
 </ol>
 
 ---
+
+
 
 
 
