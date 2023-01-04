@@ -18,7 +18,9 @@
 <br>
 
 ![ranges](https://cdn.kastatic.org/ka-perseus-images/a376ce2d2746fc126293571121a818f395a97354.png)
+
 <br>
+
 ## Basic Implementation
     1 - min = 0 and max = len(list) - 1 
     2 - middle = (min + max) / 2 
@@ -26,13 +28,13 @@
     4 - if (guess == target) {
         return guess
     } 
-    5 - if (guess < target) {
+    5 - elif (guess < target) {
         min = middle + 1
     } 
-    6 - if (guess > target) {
+    6 - elif (guess > target) {
         max = middle - 1
     }
-    
+
     7 - We have a new middle, a new try and the loop continuos
 
 <ol>
