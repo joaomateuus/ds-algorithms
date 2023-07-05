@@ -54,11 +54,10 @@
         If the guess is lower, that means that the target is to the right side so we move our minimum value setting it to the middle + 1, slicing the list to the reasonble range
     </li>
     <li>
-        If the guess is high, we do the opposite setting the maximum to the middle - 1 
+        If the guess is high, we do the opposite setting the maximum to the middle
     </li>
 </ol>
 
----
 
 
 
