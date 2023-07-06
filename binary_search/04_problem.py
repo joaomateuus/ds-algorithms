@@ -19,25 +19,24 @@ Output: Target 6 occurs 2 times
 def problem(arr: list, target: int):
     low = 0
     high = len(arr) - 1
-    occurrence_left = 0
+    occurrences = 0
     
     while low <= high:
         middle = (low + high) // 2
 
         if target == arr[middle]:
-            occurrence_left += 1
+            occurrences += 1
             arr.pop(middle)
             
         elif target >= arr[middle]:
             low = middle + 1
         else:
             high = middle - 1
-    
-    return occurrence_left
             
-resultado = problem([2, 5, 5, 5, 6, 6, 8, 9, 9, 9], 6)
+    if occurrences != 0:
+        print(f"The target {target} was found {occurrences} times")
+    else:
+        print(f"Target was not found")
+           
+problem([2, 5, 5, 5, 6, 6, 8, 9, 9, 9], 5)
 
-if resultado != 0:
-    print(f"The target was found {resultado} times")
-else:
-    print(f"Target was not found")
