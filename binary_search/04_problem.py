@@ -23,46 +23,17 @@ def problem(arr: list, target: int):
     
     while low <= high:
         middle = (low + high) // 2
-        
+
         if target == arr[middle]:
             occurrence_left += 1
+            arr.pop(middle)
             
-            #search on the left side
-            high = middle - 1
-            
-        elif target > arr[middle]:
+        elif target >= arr[middle]:
             low = middle + 1
         else:
             high = middle - 1
     
-    right_side_occ = search_on_right_side(arr, target)
-    
-    return occurrence_left + right_side_occ
-            
-
-def search_on_right_side(arr: list, target: int):
-    low = 0
-    high = len(arr) - 1
-    occurrence_count = 0
-    first_iteration = True
-    
-    while low <= high:
-        
-        middle = (low + high // 2) + 1 if first_iteration else (low + high) // 2
-        first_iteration = False
-    
-        if target == arr[middle]:
-            occurrence_count += 1
-            
-            #search on the right side
-            low = middle + 1
-        elif target > arr[middle]:
-            low = middle + 1
-        else:
-            high = middle - 1
-        
-        
-    return occurrence_count
+    return occurrence_left
             
 resultado = problem([2, 5, 5, 5, 6, 6, 8, 9, 9, 9], 6)
 
