@@ -1,8 +1,8 @@
 class Stack:
     def __init__(self) -> None:
-        self.max_lenght = 100;
-        self.lenght = 0;
-        self.stack = [];
+        self.max_lenght = 100
+        self.lenght = 0
+        self.stack = []
     
     def is_full(self):
         return len(self.stack) == self.max_lenght
